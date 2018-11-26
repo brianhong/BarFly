@@ -1,6 +1,7 @@
 <template>
   <div class="page-controller-container">
     <ActionButton
+      v-if="!showingFavorites"
       text="Favorite All On Screen"
       :onClickHandler="toggleFavoriteOnScreen"
     />
@@ -97,6 +98,9 @@ export default {
       type: Function,
       required: true,
     },
+    showingFavorites: {
+      type: Boolean
+    }
   },
 };
 </script>

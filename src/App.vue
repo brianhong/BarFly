@@ -22,6 +22,7 @@
         :numOfPages="numOfPages"
         :changePage="changePage"
         :toggleFavoriteOnScreen="toggleFavoriteOnScreen"
+        :showingFavorites="showingFavorites"
       />
       <BeerCard
         v-for="beer in displayableBeers"
@@ -35,6 +36,7 @@
         :numOfPages="numOfPages"
         :changePage="changePage"
         :toggleFavoriteOnScreen="toggleFavoriteOnScreen"
+        :showingFavorites="showingFavorites"
       />
     </div>
   </div>
