@@ -44,7 +44,7 @@ svg {
 path {
   fill: none;
   stroke: #646464;
-  stroke-width: 2px;
+  stroke-width: 3px;
   stroke-dasharray: 2,2;
   stroke-linejoin: round;
 }

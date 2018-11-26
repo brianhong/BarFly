@@ -2,14 +2,14 @@
   <div class="card">
     <div class="beer-info">
       <FavoriteController
-      :id="beer.id"
-      :beer="beer"
-      :toggleFavorite="toggleFavorite"
-      :isFavorited="isFavorited"
-    />
+        :id="beer.id"
+        :beer="beer"
+        :toggleFavorite="toggleFavorite"
+        :isFavorited="isFavorited"
+      />
       <div class="beer-blurb">
-        <p>Beer Name: {{ beer.name }}</p>
-        <p>ABV: {{ beer.abv }}</p>
+        <div>Beer Name: {{ beer.name }}</div>
+        <div>ABV: {{ beer.abv }}</div>
       </div>
       <img :src="beer.image_url" />
     </div>
@@ -58,17 +58,18 @@ img {
   width: 100px;
   object-fit: contain;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
 }
 
 .beer-blurb {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 5px;
 }
 
 .beer-info {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 </style>
