@@ -99,8 +99,8 @@ export default {
       required: true,
     },
     showingFavorites: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
 };
 </script>

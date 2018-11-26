@@ -18,27 +18,27 @@
 </template>
 
 <script>
-import FavoriteController from "./FavoriteController.vue";
+import FavoriteController from './FavoriteController.vue';
 
 export default {
-  name: "BeerCard",
+  name: 'BeerCard',
   components: {
-    FavoriteController
+    FavoriteController,
   },
   props: {
     beer: {
       type: Object,
-      required: true
+      required: true,
     },
     toggleFavorite: {
       type: Function,
-      required: true
+      required: true,
     },
     isFavorited: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 };
 </script>
 
