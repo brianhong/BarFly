@@ -1,6 +1,12 @@
 <template>
   <div class="card">
     <div class="beer-info">
+      <FavoriteController
+      :id="beer.id"
+      :beer="beer"
+      :toggleFavorite="toggleFavorite"
+      :isFavorited="isFavorited"
+    />
       <div class="beer-blurb">
         <p>Beer Name: {{ beer.name }}</p>
         <p>ABV: {{ beer.abv }}</p>
@@ -8,37 +14,31 @@
       <img :src="beer.image_url" />
     </div>
     <p><b>Description:</b> {{ beer.description }}</p>
-    <FavoriteController
-      :id="beer.id"
-      :beer="beer"
-      :toggleFavorite="toggleFavorite"
-      :isFavorited="isFavorited"
-    />
   </div>
 </template>
 
 <script>
-import FavoriteController from './FavoriteController.vue';
+import FavoriteController from "./FavoriteController.vue";
 
 export default {
-  name: 'BeerCard',
+  name: "BeerCard",
   components: {
-    FavoriteController,
+    FavoriteController
   },
   props: {
     beer: {
       type: Object,
-      required: true,
+      required: true
     },
     toggleFavorite: {
       type: Function,
-      required: true,
+      required: true
     },
     isFavorited: {
       type: Boolean,
-      default: false,
-    },
-  },
+      default: false
+    }
+  }
 };
 </script>
 
